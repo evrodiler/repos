@@ -1,0 +1,31 @@
+curl -X POST \
+  http://127.0.0.1:5000/predict \
+  -H 'Content-Type: application/json' \
+  -H 'Postman-Token: 9d01c960-bd00-47f3-b5bf-783149a012ba' \
+  -H 'cache-control: no-cache' \
+  -d 'curl -X POST  -F image=@dog.jpg '\''http://localhost:5000/predict'\''
+  '\''{
+  "predictions": [
+    {
+      "label": "beagle",
+      "probability": 0.9901360869407654
+    },
+    {
+      "label": "Walker_hound",
+      "probability": 0.002396771451458335
+    },
+    {
+      "label": "pot",
+      "probability": 0.0013951235450804234
+    },
+    {
+      "label": "Brittany_spaniel",
+      "probability": 0.001283277408219874
+    },
+    {
+      "label": "bluetick",
+      "probability": 0.0010894243605434895
+    }
+  ],
+  "success": true
+}'\'''
